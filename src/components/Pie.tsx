@@ -8,12 +8,7 @@ export function Pie() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-5 py-10 text-sm text-tinta-suave sm:px-8 lg:flex-row lg:justify-between">
         <div className="flex items-center gap-3 text-center lg:text-left">
           <Logo className="size-10 shrink-0" />
-          <div>
-            <p className="font-display text-base font-semibold text-tinta">{sitio.nombre}</p>
-            <p className="mt-0.5">
-              {sitio.titulo} · Desde Xela para toda Guatemala
-            </p>
-          </div>
+          <p className="font-display text-base font-semibold text-tinta">{sitio.nombre}</p>
         </div>
         <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2">
           {enlacesNavegacion.map((enlace) => (
