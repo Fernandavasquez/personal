@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Paleta pastel: celestes como base, con acentos lavanda, menta y durazno. */
+@theme {
+  --color-cielo-50: #f3f9ff;
+  --color-cielo-100: #e4f2fd;
+  --color-cielo-200: #c9e5fb;
+  --color-cielo-300: #a3d3f6;
+  --color-cielo-400: #73b9ec;
+  --color-cielo-500: #4a9ddb;
+  --color-cielo-600: #2f7fbd;
+  --color-cielo-700: #276699;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-tinta: #1d3147;
+  --color-tinta-suave: #4b5f76;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-lavanda: #ece8fd;
+  --color-lavanda-fuerte: #8b7fd6;
+  --color-menta: #dcf5ec;
+  --color-menta-fuerte: #3f9e7d;
+  --color-durazno: #ffeadf;
+  --color-durazno-fuerte: #d9785a;
+  --color-mantequilla: #fff5d8;
+  --color-mantequilla-fuerte: #b98a1c;
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-jakarta);
+
+  --shadow-suave: 0 1px 2px rgb(29 49 71 / 0.04), 0 8px 24px -6px rgb(47 127 189 / 0.14);
+  --shadow-flotante: 0 2px 4px rgb(29 49 71 / 0.04), 0 24px 48px -12px rgb(47 127 189 / 0.22);
+
+  --animate-flotar: flotar 7s ease-in-out infinite;
+
+  @keyframes flotar {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cielo-50);
+  color: var(--color-tinta);
+}
+
+::selection {
+  background: var(--color-cielo-200);
+  color: var(--color-tinta);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }

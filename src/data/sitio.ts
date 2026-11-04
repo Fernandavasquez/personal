@@ -1,0 +1,33 @@
+// Datos del sitio en un solo lugar: cambia aquí tu información y se actualiza toda la página.
+
+export const sitio = {
+  nombre: "Fernanda Lisbeth Vásquez Castillo",
+  nombreCorto: "Fernanda Vásquez",
+  titulo: "Ingeniera en Informática y Sistemas",
+  ubicacion: "Quetzaltenango, Guatemala",
+
+  // Teléfono para WhatsApp y llamadas: código de país (502) + número, sin espacios.
+  whatsapp: "50257844154",
+  telefonoVisible: "+502 5784 4154",
+  facebookNombre: "Fernanda Vasquez",
+  // Pega aquí el enlace de tu perfil o página de Facebook (por ejemplo "https://facebook.com/tu.usuario").
+  facebookUrl: "",
+  github: "https://github.com/Fernandavasquez",
+};
+
+export function enlaceLlamada() {
+  return `tel:+${sitio.whatsapp}`;
+}
+
+export const enlacesNavegacion = [
+  { href: "#por-que", texto: "Por qué digitalizar" },
+  { href: "#servicios", texto: "Servicios" },
+  { href: "#proceso", texto: "Cómo trabajo" },
+  { href: "#sobre-mi", texto: "Sobre mí" },
+  { href: "#preguntas", texto: "Preguntas" },
+];
+
+export function enlaceWhatsapp(mensaje = "¡Hola Fernanda! Me interesa digitalizar mi negocio.") {
+  if (!sitio.whatsapp) return "#contacto";
+  return `https://wa.me/${sitio.whatsapp}?text=${encodeURIComponent(mensaje)}`;
+}
