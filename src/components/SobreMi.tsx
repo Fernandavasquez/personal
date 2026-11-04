@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { sitio } from "@/data/sitio";
-import foto from "../../public/fernanda.webp";
+import foto from "../../public/fernanda.jpg";
 import { Icono, type NombreIcono } from "./Icono";
 
 const valores: { icono: NombreIcono; titulo: string; texto: string }[] = [
@@ -22,23 +22,8 @@ export function SobreMi() {
               alt={`${sitio.nombre}, ${sitio.titulo}, el día de su graduación`}
               placeholder="blur"
               sizes="(min-width: 1024px) 640px, 100vw"
-              className="aspect-[4/5] w-full origin-[50%_22%] scale-[1.45] object-cover object-[50%_20%]"
+              className="aspect-[4/5] w-full origin-[62%_30%] scale-[1.25] object-cover object-[50%_24%]"
             />
-          </div>
-
-          <div className="absolute -bottom-6 -left-4 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-flotante sm:-left-10">
-            <span className="grid size-10 place-items-center rounded-xl bg-mantequilla text-mantequilla-fuerte">
-              <Icono nombre="birrete" className="size-5" />
-            </span>
-            <div>
-              <p className="text-xs text-tinta-suave">Graduada en</p>
-              <p className="text-sm font-semibold">Informática y Sistemas</p>
-            </div>
-          </div>
-
-          <div className="absolute -top-5 -right-3 flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold shadow-flotante sm:-right-8">
-            <Icono nombre="ubicacion" className="size-4 text-cielo-500" />
-            Xela, Guatemala
           </div>
         </div>
 
