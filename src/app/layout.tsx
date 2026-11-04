@@ -37,8 +37,9 @@ export const metadata: Metadata = {
   },
 };
 
-// Aplica el tema guardado (o el del sistema) antes de pintar la página, para evitar un destello.
-const scriptTema = `try{var t=localStorage.getItem("tema");if(t==="oscuro"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}`;
+// La página inicia siempre en modo claro; solo usa el oscuro si el visitante lo eligió antes con el botón.
+// Se aplica antes de pintar la página, para evitar un destello.
+const scriptTema = `try{if(localStorage.getItem("tema")==="oscuro")document.documentElement.classList.add("dark")}catch(e){}`;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
