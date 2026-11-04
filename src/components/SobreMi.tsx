@@ -5,7 +5,6 @@ import { Icono, type NombreIcono } from "./Icono";
 
 const valores: { icono: NombreIcono; titulo: string; texto: string }[] = [
   { icono: "chat", titulo: "Te explico todo claro", texto: "Sin palabras técnicas complicadas." },
-  { icono: "ubicacion", titulo: "Cerca de ti", texto: "Conozco cómo trabajan los negocios de Xela." },
   { icono: "corazon", titulo: "Compromiso real", texto: "Tu proyecto lo cuido como si fuera mío." },
 ];
 
@@ -54,7 +53,7 @@ export function SobreMi() {
             <figcaption className="mt-3 text-sm font-semibold text-cielo-600">— {sitio.nombreCorto}</figcaption>
           </figure>
 
-          <ul className="mt-9 grid gap-4 sm:grid-cols-3">
+          <ul className="mt-9 grid gap-4 sm:grid-cols-2">
             {valores.map((valor) => (
               <li key={valor.titulo} className="rounded-2xl border border-white bg-white/80 p-5 shadow-suave">
                 <Icono nombre={valor.icono} className="size-6 text-cielo-500" />
