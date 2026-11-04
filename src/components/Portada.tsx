@@ -13,7 +13,7 @@ export function Portada() {
         <div className="absolute bottom-0 left-1/3 size-[20rem] rounded-full bg-menta/80 blur-3xl" />
       </div>
 
-      <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.2fr_1fr]">
+      <div className="mx-auto grid max-w-6xl items-center gap-24 px-5 lg:gap-14 sm:px-8 lg:grid-cols-[1.2fr_1fr]">
         <div>
           <h1 className="animate-entrar text-balance font-display text-[2.9rem] font-medium leading-[1.04] tracking-tight sm:text-7xl xl:text-[5.4rem]">
             Tu negocio merece{" "}
@@ -46,8 +46,8 @@ export function Portada() {
             </a>
           </div>
 
-          <ul className="animate-entrar [animation-delay:400ms] mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-tinta-suave">
-            {["Atención cercana y en español", "Diseño a tu medida", "Acompañamiento después del lanzamiento"].map(
+          <ul className="animate-entrar [animation-delay:400ms] mt-10 flex flex-wrap gap-x-6 gap-y-3 text-base text-tinta-suave">
+            {["Atención cercana"].map(
               (punto) => (
                 <li key={punto} className="flex items-center gap-2">
                   <span className="grid size-5 place-items-center rounded-full bg-menta text-menta-fuerte">
