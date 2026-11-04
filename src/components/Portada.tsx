@@ -1,4 +1,4 @@
-import { enlaceWhatsapp, sitio } from "@/data/sitio";
+import { enlaceWhatsapp } from "@/data/sitio";
 import { Icono } from "./Icono";
 
 const barras = [38, 52, 46, 64, 58, 76, 88];
@@ -13,9 +13,9 @@ export function Portada() {
         <div className="absolute bottom-0 left-1/3 size-[20rem] rounded-full bg-menta/80 blur-3xl" />
       </div>
 
-      <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.1fr_1fr]">
+      <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.2fr_1fr]">
         <div>
-          <h1 className="animate-entrar text-balance font-display text-[2.6rem] font-medium leading-[1.08] tracking-tight sm:text-6xl">
+          <h1 className="animate-entrar text-balance font-display text-[2.9rem] font-medium leading-[1.04] tracking-tight sm:text-7xl xl:text-[5.4rem]">
             Tu negocio merece{" "}
             <span className="relative whitespace-nowrap italic text-cielo-600">
               crecer en digital
@@ -30,13 +30,7 @@ export function Portada() {
             </span>
           </h1>
 
-          <p className="animate-entrar [animation-delay:200ms] mt-7 max-w-xl text-pretty text-lg leading-relaxed text-tinta-suave">
-            Soy <strong className="font-semibold text-tinta">{sitio.nombre}</strong>, {sitio.titulo.toLowerCase()}.
-            Diseño y desarrollo páginas y sistemas web a la medida para que tu negocio venda más, se
-            organice mejor y ahorre tiempo.
-          </p>
-
-          <div className="animate-entrar [animation-delay:300ms] mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="animate-entrar [animation-delay:200ms] mt-12 flex flex-col gap-3 sm:flex-row">
             <a
               href={enlaceWhatsapp()}
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-tinta px-7 py-4 font-semibold text-white shadow-flotante transition-all hover:-translate-y-0.5 hover:bg-cielo-700"
