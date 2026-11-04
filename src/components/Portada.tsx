@@ -15,12 +15,7 @@ export function Portada() {
 
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.1fr_1fr]">
         <div>
-          <p className="animate-entrar inline-flex items-center gap-2 rounded-full border border-cielo-200 bg-white/70 px-4 py-1.5 text-sm text-tinta-suave backdrop-blur">
-            <Icono nombre="ubicacion" className="size-4 text-cielo-500" />
-            {sitio.ubicacion} · Clientes en todo el país
-          </p>
-
-          <h1 className="animate-entrar [animation-delay:100ms] mt-6 text-balance font-display text-[2.6rem] font-medium leading-[1.08] tracking-tight sm:text-6xl">
+          <h1 className="animate-entrar text-balance font-display text-[2.6rem] font-medium leading-[1.08] tracking-tight sm:text-6xl">
             Tu negocio merece{" "}
             <span className="relative whitespace-nowrap italic text-cielo-600">
               crecer en digital
