@@ -4,12 +4,12 @@ import { Titulo } from "./Titulo";
 const pasos: { icono: NombreIcono; titulo: string; texto: string }[] = [
   {
     icono: "chat",
-    titulo: "Platicamos",
+    titulo: "Comunicación",
     texto: "Me cuentas cómo funciona tu negocio y qué quieres lograr. Sin tecnicismos y sin compromiso.",
   },
   {
     icono: "pincel",
-    titulo: "Diseñamos",
+    titulo: "Diseño",
     texto: "Te presento una propuesta visual y un plan claro, con tiempos y costos definidos desde el inicio.",
   },
   {
@@ -19,7 +19,7 @@ const pasos: { icono: NombreIcono; titulo: string; texto: string }[] = [
   },
   {
     icono: "cohete",
-    titulo: "Lanzamos",
+    titulo: "Lanzamiento",
     texto: "Lo publicamos, te enseño a usarlo y te sigo acompañando para que todo funcione perfecto.",
   },
 ];
