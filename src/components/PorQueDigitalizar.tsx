@@ -4,7 +4,7 @@ import { Titulo } from "./Titulo";
 const razones: { icono: NombreIcono; titulo: string; texto: string; fondo: string; color: string }[] = [
   {
     icono: "lupa",
-    titulo: "Te encuentran más clientes",
+    titulo: "Acceso a más clientes",
     texto: "Hoy la gente busca en Google y en redes antes de comprar. Si tu negocio no aparece, ese cliente se va con alguien que sí aparece.",
     fondo: "bg-cielo-100",
     color: "text-cielo-600",
