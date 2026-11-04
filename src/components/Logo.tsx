@@ -1,7 +1,7 @@
 import { useId } from "react";
 
-// Logotipo de Fernanda Vásquez: monograma "FV" en un cuadro suave celeste–lavanda,
-// con una chispa que representa la creatividad y la transformación digital.
+// Logotipo de Fernanda Vásquez: monograma "FV" dentro de los signos < >, como una etiqueta de código,
+// sobre un cuadro suave celeste–lavanda. Representa la programación y el desarrollo web.
 // Los colores son fijos para que el logo se vea igual en modo claro y oscuro.
 export function Logo({ className = "size-10" }: { className?: string }) {
   const id = useId();
@@ -16,17 +16,16 @@ export function Logo({ className = "size-10" }: { className?: string }) {
       </defs>
       <rect x="1" y="1" width="38" height="38" rx="12" fill={`url(#${id}-fondo)`} />
       <rect x="1" y="1" width="38" height="38" rx="12" fill="none" stroke="#fff" strokeOpacity="0.45" />
-      <g fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-        {/* F */}
-        <path d="M9.5 28.5V11.5h8M9.5 19.5h6" />
-        {/* V */}
-        <path d="M19.5 11.5l4.75 17 4.75-17" />
+      {/* Signos de código < > */}
+      <g fill="none" stroke="#fff5d8" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M8 15.5l-4 4.5 4 4.5" />
+        <path d="M32 15.5l4 4.5-4 4.5" />
       </g>
-      {/* Chispa */}
-      <path
-        d="M32.5 5.5c.25 1.4.85 2 2.25 2.25-1.4.25-2 .85-2.25 2.25-.25-1.4-.85-2-2.25-2.25 1.4-.25 2-.85 2.25-2.25z"
-        fill="#fff5d8"
-      />
+      {/* F y V */}
+      <g fill="none" stroke="#fff" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M11.5 26.5V13.5h6M11.5 19.75h4.5" />
+        <path d="M20 13.5l3.75 13 3.75-13" />
+      </g>
     </svg>
   );
 }
