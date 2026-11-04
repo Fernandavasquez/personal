@@ -1,11 +1,8 @@
-import { enlaceLlamada, enlaceWhatsapp, sitio } from "@/data/sitio";
+import { enlaceWhatsapp, sitio } from "@/data/sitio";
 import { Icono } from "./Icono";
-import { IconoFacebook, IconoWhatsapp } from "./IconosMarca";
+import { IconoWhatsapp } from "./IconosMarca";
 
 export function Contacto() {
-  const tarjeta =
-    "flex items-center gap-4 rounded-3xl bg-white/90 p-5 text-left shadow-suave transition-all hover:-translate-y-1 hover:shadow-flotante";
-
   return (
     <section id="contacto" className="py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
@@ -21,58 +18,23 @@ export function Contacto() {
               Escríbeme y platiquemos de tu idea. La primera consulta es gratis y sin compromiso.
             </p>
 
-            <a
-              href={enlaceWhatsapp()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-9 inline-flex items-center gap-2.5 rounded-full bg-tinta px-8 py-4 text-lg font-semibold text-white shadow-flotante transition-all hover:-translate-y-0.5 hover:bg-cielo-700"
-            >
-              <IconoWhatsapp className="size-6" />
-              Escríbeme por WhatsApp
-            </a>
-
-            <div className="mx-auto mt-12 grid max-w-3xl gap-4 sm:grid-cols-3">
-              <a href={enlaceWhatsapp()} target="_blank" rel="noopener noreferrer" className={tarjeta}>
-                <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-menta text-menta-fuerte">
-                  <IconoWhatsapp />
-                </span>
-                <span>
-                  <span className="block text-sm text-tinta-suave">WhatsApp</span>
-                  <span className="block font-semibold">{sitio.telefonoVisible}</span>
-                </span>
+            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a
+                href={enlaceWhatsapp()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 rounded-full bg-tinta px-8 py-4 text-lg font-semibold text-white shadow-flotante transition-all hover:-translate-y-0.5 hover:bg-cielo-700"
+              >
+                <IconoWhatsapp className="size-6" />
+                Escríbeme por WhatsApp
               </a>
-
-              <a href={enlaceLlamada()} className={tarjeta}>
-                <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-cielo-100 text-cielo-600">
-                  <Icono nombre="telefono" />
-                </span>
-                <span>
-                  <span className="block text-sm text-tinta-suave">Llamada</span>
-                  <span className="block font-semibold">{sitio.telefonoVisible}</span>
-                </span>
+              <a
+                href={`mailto:${sitio.correo}`}
+                className="inline-flex items-center gap-2.5 rounded-full bg-white/90 px-7 py-4 font-semibold text-tinta shadow-suave transition-all hover:-translate-y-0.5 hover:shadow-flotante"
+              >
+                <Icono nombre="correo" className="size-5 text-cielo-600" />
+                {sitio.correo}
               </a>
-
-              {sitio.facebookUrl ? (
-                <a href={sitio.facebookUrl} target="_blank" rel="noopener noreferrer" className={tarjeta}>
-                  <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-lavanda text-lavanda-fuerte">
-                    <IconoFacebook />
-                  </span>
-                  <span>
-                    <span className="block text-sm text-tinta-suave">Facebook</span>
-                    <span className="block font-semibold">{sitio.facebookNombre}</span>
-                  </span>
-                </a>
-              ) : (
-                <div className={tarjeta}>
-                  <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-lavanda text-lavanda-fuerte">
-                    <IconoFacebook />
-                  </span>
-                  <span>
-                    <span className="block text-sm text-tinta-suave">Facebook</span>
-                    <span className="block font-semibold">{sitio.facebookNombre}</span>
-                  </span>
-                </div>
-              )}
             </div>
           </div>
         </div>

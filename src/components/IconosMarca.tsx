@@ -6,10 +6,3 @@ export function IconoWhatsapp({ className = "size-6" }: { className?: string }) 
   );
 }
 
-export function IconoFacebook({ className = "size-6" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
-      <path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.3A22 22 0 0 0 14.6 2C12.2 2 10.6 3.5 10.6 6.2v2.3H8V12h2.6v10H14V12h2.7l.4-3.5z" />
-    </svg>
-  );
-}

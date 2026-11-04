@@ -8,21 +8,16 @@ export const sitio = {
   // Tu frase personal: aparece en la sección "Sobre mí".
   frase: "La tecnología es mi herramienta; el crecimiento de tu negocio, mi propósito.",
 
-  // Teléfono para WhatsApp y llamadas: código de país (502) + número, sin espacios.
+  // Teléfono para WhatsApp: código de país (502) + número, sin espacios.
   whatsapp: "50257844154",
   telefonoVisible: "+502 5784 4154",
-  facebookNombre: "Fernanda Vasquez",
-  facebookUrl: "https://www.facebook.com/share/14uP54Gd4sM/",
+  correo: "castilloferlisbeth@gmail.com",
   github: "https://github.com/Fernandavasquez",
 
   // Cifras de confianza: actualízalas cuando crezcan.
   proyectosEntregados: 10,
   aniosExperiencia: 2,
 };
-
-export function enlaceLlamada() {
-  return `tel:+${sitio.whatsapp}`;
-}
 
 export const enlacesNavegacion = [
   { href: "/#por-que", texto: "Por qué digitalizar" },
