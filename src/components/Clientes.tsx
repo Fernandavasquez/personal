@@ -18,9 +18,9 @@ export function Clientes() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Titulo
           etiqueta="¿Para quién trabajo?"
-          descripcion="Desde Quetzaltenango trabajo con clientes de todo el país. Platicamos por WhatsApp, llamada o videollamada, así que no importa en qué departamento esté tu negocio."
+          descripcion="Trabajo con todo tipo de negocios, pequeños o grandes, en Xela y en todo el país. Estos son algunos ejemplos de lo que puedo hacer por el tuyo."
         >
-          Negocios de <span className="italic text-cielo-600">toda Guatemala</span>
+          Para <span className="italic text-cielo-600">todo tipo de negocio</span>
         </Titulo>
 
         <ul className="mt-14 grid grid-cols-2 gap-4 lg:grid-cols-4">
@@ -40,21 +40,9 @@ export function Clientes() {
           ))}
         </ul>
 
-        <div
-          data-aparecer
-          className="mt-8 flex flex-col items-center gap-4 rounded-3xl bg-gradient-to-r from-cielo-100 via-lavanda to-menta px-6 py-6 text-center sm:flex-row sm:justify-center sm:text-left"
-        >
-          <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-white text-cielo-600 shadow-suave">
-            <Icono nombre="mapa" />
-          </span>
-          <p className="max-w-2xl text-tinta">
-            <strong className="font-semibold">¿Tu negocio está en otro lugar del país?</strong>{" "}
-            <span className="text-tinta-suave">
-              Guatemala, Huehuetenango, San Marcos, Retalhuleu o donde estés: trabajamos juntos en línea con la misma
-              atención cercana.
-            </span>
-          </p>
-        </div>
+        <p data-aparecer className="mt-10 text-center text-lg text-tinta-suave">
+          …y <strong className="font-semibold text-tinta">cualquier otro negocio</strong> que quiera crecer en digital. ✨
+        </p>
       </div>
     </section>
   );
