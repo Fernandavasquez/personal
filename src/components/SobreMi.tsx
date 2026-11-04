@@ -6,6 +6,7 @@ import { Icono, type NombreIcono } from "./Icono";
 const valores: { icono: NombreIcono; titulo: string; texto: string }[] = [
   { icono: "chat", titulo: "Te explico todo claro", texto: "Sin palabras técnicas complicadas." },
   { icono: "corazon", titulo: "Compromiso real", texto: "Tu proyecto lo cuido como si fuera mío." },
+  { icono: "escudo", titulo: "Confidencialidad", texto: "Tu información está segura conmigo." },
 ];
 
 export function SobreMi() {
@@ -44,6 +45,11 @@ export function SobreMi() {
               cerca contigo, escucho lo que necesitas y construyo soluciones sencillas de usar, bonitas y
               que realmente funcionen.
             </p>
+            <p>
+              Mi prioridad es la <strong className="font-semibold text-tinta">confidencialidad</strong>: la
+              información de tu empresa, tus clientes y tus datos se manejan con total discreción y se protegen con
+              buenas prácticas de seguridad.
+            </p>
           </div>
 
           <figure className="relative mt-8 rounded-3xl border-l-4 border-cielo-300 bg-white/80 py-5 pr-6 pl-7 shadow-suave">
@@ -53,7 +59,7 @@ export function SobreMi() {
             <figcaption className="mt-3 text-sm font-semibold text-cielo-600">— {sitio.nombreCorto}</figcaption>
           </figure>
 
-          <ul className="mt-9 grid gap-4 sm:grid-cols-2">
+          <ul className="mt-9 grid gap-4 sm:grid-cols-3">
             {valores.map((valor) => (
               <li key={valor.titulo} className="rounded-2xl border border-white bg-white/80 p-5 shadow-suave">
                 <Icono nombre={valor.icono} className="size-6 text-cielo-500" />
