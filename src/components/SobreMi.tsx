@@ -53,7 +53,7 @@ export function SobreMi() {
           <div className="mt-6 space-y-4 text-lg leading-relaxed text-tinta-suave">
             <p>
               Soy {sitio.titulo.toLowerCase()} y vivo en {sitio.ubicacion}. Me dedico a crear páginas web y
-              sistemas que resuelven problemas reales de negocios como el tuyo.
+              sistemas que resuelven problemas reales de negocios como el tuyo, en Xela y en todo el país.
             </p>
             <p>
               Creo que la tecnología debe hacerte la vida más fácil, no más complicada. Por eso trabajo de

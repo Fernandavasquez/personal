@@ -1,8 +1,8 @@
 import { Animaciones } from "@/components/Animaciones";
-import { BotonWhatsapp } from "@/components/BotonWhatsapp";
+import { Cifras } from "@/components/Cifras";
+import { Clientes } from "@/components/Clientes";
+import { ConsejosInicio } from "@/components/ConsejosInicio";
 import { Contacto } from "@/components/Contacto";
-import { Encabezado } from "@/components/Encabezado";
-import { Pie } from "@/components/Pie";
 import { PorQueDigitalizar } from "@/components/PorQueDigitalizar";
 import { Portada } from "@/components/Portada";
 import { Preguntas } from "@/components/Preguntas";
@@ -13,21 +13,19 @@ import { Tecnologias } from "@/components/Tecnologias";
 
 export default function Inicio() {
   return (
-    <>
-      <Encabezado />
-      <main className="flex-1">
-        <Portada />
-        <PorQueDigitalizar />
-        <Servicios />
-        <Tecnologias />
-        <Proceso />
-        <SobreMi />
-        <Preguntas />
-        <Contacto />
-      </main>
-      <Pie />
-      <BotonWhatsapp />
+    <main className="flex-1">
+      <Portada />
+      <Cifras />
+      <PorQueDigitalizar />
+      <Servicios />
+      <Clientes />
+      <Tecnologias />
+      <Proceso />
+      <SobreMi />
+      <ConsejosInicio />
+      <Preguntas />
+      <Contacto />
       <Animaciones />
-    </>
+    </main>
   );
 }

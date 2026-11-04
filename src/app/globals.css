@@ -54,6 +54,44 @@
   }
 }
 
+/*
+  Modo oscuro: en lugar de repetir "dark:" en cada componente, se reasigna la paleta.
+  "white" pasa a ser la superficie de las tarjetas, los celestes claros pasan a azul noche
+  y los colores de texto y acentos se aclaran. Así todo el sitio cambia de forma coherente.
+*/
+html.dark {
+  color-scheme: dark;
+
+  --color-white: #15243a;
+  --color-cielo-50: #0d1828;
+  --color-cielo-100: #1a2b44;
+  --color-cielo-200: #22395a;
+  --color-cielo-300: #33557e;
+  --color-cielo-400: #5a92cc;
+  --color-cielo-500: #78b3e6;
+  --color-cielo-600: #94c9f3;
+  --color-cielo-700: #b3dbf9;
+
+  --color-tinta: #e7eff8;
+  --color-tinta-suave: #a6b7ca;
+
+  --color-lavanda: #2a2850;
+  --color-lavanda-fuerte: #bcb2f7;
+  --color-menta: #15392f;
+  --color-menta-fuerte: #82dbb9;
+  --color-durazno: #3e2a27;
+  --color-durazno-fuerte: #f5ab93;
+  --color-mantequilla: #3a321f;
+  --color-mantequilla-fuerte: #ebc96b;
+
+  --shadow-suave: 0 1px 2px rgb(0 0 0 / 0.25), 0 8px 24px -6px rgb(0 0 0 / 0.35);
+  --shadow-flotante: 0 2px 4px rgb(0 0 0 / 0.25), 0 24px 48px -12px rgb(0 0 0 / 0.5);
+}
+
+html.dark body {
+  transition: background-color 0.3s ease;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5.5rem;

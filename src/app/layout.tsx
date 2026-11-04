@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
+import { BotonWhatsapp } from "@/components/BotonWhatsapp";
+import { Encabezado } from "@/components/Encabezado";
+import { Pie } from "@/components/Pie";
 import { sitio } from "@/data/sitio";
 import "./globals.css";
 
@@ -17,7 +20,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: `${sitio.nombreCorto} · Desarrollo web y sistemas en Quetzaltenango`,
   description:
-    "Ingeniera en Informática y Sistemas en Quetzaltenango, Guatemala. Páginas web completas, sistemas web a la medida y servicio mensual para digitalizar tu negocio.",
+    "Ingeniera en Informática y Sistemas en Quetzaltenango, con clientes en toda Guatemala. Páginas web completas, sistemas web a la medida y servicio mensual para digitalizar tu negocio.",
   keywords: [
     "desarrollo web Quetzaltenango",
     "páginas web Guatemala",
@@ -34,13 +37,25 @@ export const metadata: Metadata = {
   },
 };
 
+// Aplica el tema guardado (o el del sistema) antes de pintar la página, para evitar un destello.
+const scriptTema = `try{var t=localStorage.getItem("tema");if(t==="oscuro"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}`;
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es-GT"
+      suppressHydrationWarning
       className={`${fraunces.variable} ${jakarta.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: scriptTema }} />
+      </head>
+      <body className="min-h-full flex flex-col font-sans">
+        <Encabezado />
+        {children}
+        <Pie />
+        <BotonWhatsapp />
+      </body>
     </html>
   );
 }

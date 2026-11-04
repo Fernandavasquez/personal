@@ -1,21 +1,26 @@
+import Link from "next/link";
 import { enlacesNavegacion, sitio } from "@/data/sitio";
+import { Logo } from "./Logo";
 
 export function Pie() {
   return (
     <footer className="border-t border-cielo-100 bg-white/60">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-5 py-10 text-sm text-tinta-suave sm:px-8 md:flex-row md:justify-between">
-        <div className="text-center md:text-left">
-          <p className="font-display text-base font-semibold text-tinta">{sitio.nombre}</p>
-          <p className="mt-1">
-            {sitio.titulo} · {sitio.ubicacion}
-          </p>
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-5 py-10 text-sm text-tinta-suave sm:px-8 lg:flex-row lg:justify-between">
+        <div className="flex items-center gap-3 text-center lg:text-left">
+          <Logo className="size-10 shrink-0" />
+          <div>
+            <p className="font-display text-base font-semibold text-tinta">{sitio.nombre}</p>
+            <p className="mt-0.5">
+              {sitio.titulo} · Desde Xela para toda Guatemala
+            </p>
+          </div>
         </div>
         <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2">
           {enlacesNavegacion.map((enlace) => (
             <li key={enlace.href}>
-              <a href={enlace.href} className="hover:text-tinta">
+              <Link href={enlace.href} className="hover:text-tinta">
                 {enlace.texto}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

@@ -14,6 +14,10 @@ export const sitio = {
   facebookNombre: "Fernanda Vasquez",
   facebookUrl: "https://www.facebook.com/share/14uP54Gd4sM/",
   github: "https://github.com/Fernandavasquez",
+
+  // Cifras de confianza: actualízalas cuando crezcan.
+  proyectosEntregados: 10,
+  aniosExperiencia: 2,
 };
 
 export function enlaceLlamada() {
@@ -21,11 +25,12 @@ export function enlaceLlamada() {
 }
 
 export const enlacesNavegacion = [
-  { href: "#por-que", texto: "Por qué digitalizar" },
-  { href: "#servicios", texto: "Servicios" },
-  { href: "#tecnologias", texto: "Tecnologías" },
-  { href: "#proceso", texto: "Cómo trabajo" },
-  { href: "#sobre-mi", texto: "Sobre mí" },
+  { href: "/#por-que", texto: "Por qué digitalizar" },
+  { href: "/#servicios", texto: "Servicios" },
+  { href: "/#clientes", texto: "Clientes" },
+  { href: "/#tecnologias", texto: "Tecnologías" },
+  { href: "/#sobre-mi", texto: "Sobre mí" },
+  { href: "/blog", texto: "Consejos" },
 ];
 
 export function enlaceWhatsapp(mensaje = "¡Hola Fernanda! Me interesa digitalizar mi negocio.") {
