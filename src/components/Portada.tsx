@@ -15,12 +15,12 @@ export function Portada() {
 
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.1fr_1fr]">
         <div>
-          <p className="inline-flex items-center gap-2 rounded-full border border-cielo-200 bg-white/70 px-4 py-1.5 text-sm text-tinta-suave backdrop-blur">
+          <p className="animate-entrar inline-flex items-center gap-2 rounded-full border border-cielo-200 bg-white/70 px-4 py-1.5 text-sm text-tinta-suave backdrop-blur">
             <Icono nombre="ubicacion" className="size-4 text-cielo-500" />
             {sitio.ubicacion}
           </p>
 
-          <h1 className="mt-6 text-balance font-display text-[2.6rem] font-medium leading-[1.08] tracking-tight sm:text-6xl">
+          <h1 className="animate-entrar [animation-delay:100ms] mt-6 text-balance font-display text-[2.6rem] font-medium leading-[1.08] tracking-tight sm:text-6xl">
             Tu negocio merece{" "}
             <span className="relative whitespace-nowrap italic text-cielo-600">
               crecer en digital
@@ -35,13 +35,13 @@ export function Portada() {
             </span>
           </h1>
 
-          <p className="mt-7 max-w-xl text-pretty text-lg leading-relaxed text-tinta-suave">
+          <p className="animate-entrar [animation-delay:200ms] mt-7 max-w-xl text-pretty text-lg leading-relaxed text-tinta-suave">
             Soy <strong className="font-semibold text-tinta">{sitio.nombre}</strong>, {sitio.titulo.toLowerCase()}.
             Creo páginas web completas, con su diseño y su lógica, y sistemas web a la medida para que
             tu negocio venda más, se organice mejor y ahorre tiempo.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="animate-entrar [animation-delay:300ms] mt-9 flex flex-col gap-3 sm:flex-row">
             <a
               href={enlaceWhatsapp()}
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-tinta px-7 py-4 font-semibold text-white shadow-flotante transition-all hover:-translate-y-0.5 hover:bg-cielo-700"
@@ -57,7 +57,7 @@ export function Portada() {
             </a>
           </div>
 
-          <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-tinta-suave">
+          <ul className="animate-entrar [animation-delay:400ms] mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-tinta-suave">
             {["Atención cercana y en español", "Diseño a tu medida", "Acompañamiento después del lanzamiento"].map(
               (punto) => (
                 <li key={punto} className="flex items-center gap-2">
@@ -72,7 +72,7 @@ export function Portada() {
         </div>
 
         {/* Ilustración: panel de un negocio digitalizado */}
-        <div aria-hidden className="relative mx-auto w-full max-w-md lg:max-w-none">
+        <div aria-hidden className="animate-entrar [animation-delay:250ms] relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="relative rounded-[2rem] border border-white bg-white/85 p-6 shadow-flotante backdrop-blur">
             <div className="flex items-center justify-between">
               <div>

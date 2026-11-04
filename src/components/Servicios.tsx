@@ -71,6 +71,8 @@ export function Servicios() {
           {servicios.map((servicio, i) => (
             <li
               key={servicio.titulo}
+              data-aparecer
+              style={{ "--retraso": `${i * 110}ms` } as React.CSSProperties}
               className={`relative flex flex-col rounded-[2rem] border bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-flotante ${
                 i === 1 ? "border-cielo-300 shadow-flotante" : "border-cielo-100 shadow-suave"
               }`}

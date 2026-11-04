@@ -73,9 +73,11 @@ export function PorQueDigitalizar() {
         </Titulo>
 
         <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {razones.map((razon) => (
+          {razones.map((razon, i) => (
             <li
               key={razon.titulo}
+              data-aparecer
+              style={{ "--retraso": `${(i % 3) * 90}ms` } as React.CSSProperties}
               className="group rounded-3xl border border-white bg-white/80 p-7 shadow-suave transition-all duration-300 hover:-translate-y-1 hover:shadow-flotante"
             >
               <span className={`grid size-12 place-items-center rounded-2xl ${razon.fondo} ${razon.color}`}>
@@ -87,7 +89,7 @@ export function PorQueDigitalizar() {
           ))}
         </ul>
 
-        <div className="mt-16 grid overflow-hidden rounded-[2rem] shadow-flotante md:grid-cols-2">
+        <div data-aparecer className="mt-16 grid overflow-hidden rounded-[2rem] shadow-flotante md:grid-cols-2">
           <div className="bg-white p-8 sm:p-10">
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-durazno-fuerte">Sin digitalizar</p>
             <ul className="mt-6 space-y-4">

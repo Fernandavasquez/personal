@@ -14,7 +14,7 @@ export function SobreMi() {
     <section id="sobre-mi" className="py-20 sm:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr]">
         {/* Foto de presentación */}
-        <div className="relative mx-auto w-full max-w-sm">
+        <div data-aparecer className="relative mx-auto w-full max-w-sm">
           <div aria-hidden className="absolute -inset-4 rotate-3 rounded-[2.5rem] bg-gradient-to-br from-cielo-200 to-lavanda" />
           <div className="relative overflow-hidden rounded-[2rem] border-8 border-white bg-white shadow-flotante">
             <Image
@@ -42,7 +42,7 @@ export function SobreMi() {
           </div>
         </div>
 
-        <div>
+        <div data-aparecer style={{ "--retraso": `${120}ms` } as React.CSSProperties}>
           <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-cielo-600 shadow-suave">
             <span className="size-1.5 rounded-full bg-cielo-400" />
             Sobre mí

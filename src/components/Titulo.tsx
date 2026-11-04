@@ -12,7 +12,7 @@ export function Titulo({
   centrado?: boolean;
 }) {
   return (
-    <div className={centrado ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
+    <div data-aparecer className={centrado ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
       <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-cielo-600 shadow-suave">
         <span className="size-1.5 rounded-full bg-cielo-400" />
         {etiqueta}

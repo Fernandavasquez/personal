@@ -23,9 +23,9 @@ export function enlaceLlamada() {
 export const enlacesNavegacion = [
   { href: "#por-que", texto: "Por qué digitalizar" },
   { href: "#servicios", texto: "Servicios" },
+  { href: "#tecnologias", texto: "Tecnologías" },
   { href: "#proceso", texto: "Cómo trabajo" },
   { href: "#sobre-mi", texto: "Sobre mí" },
-  { href: "#preguntas", texto: "Preguntas" },
 ];
 
 export function enlaceWhatsapp(mensaje = "¡Hola Fernanda! Me interesa digitalizar mi negocio.") {

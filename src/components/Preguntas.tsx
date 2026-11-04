@@ -38,9 +38,11 @@ export function Preguntas() {
         </Titulo>
 
         <div className="mt-12 space-y-3">
-          {preguntas.map((item) => (
+          {preguntas.map((item, i) => (
             <details
               key={item.pregunta}
+              data-aparecer
+              style={{ "--retraso": `${i * 70}ms` } as React.CSSProperties}
               className="group rounded-3xl border border-white bg-white/85 shadow-suave transition-shadow open:shadow-flotante"
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-6 font-semibold [&::-webkit-details-marker]:hidden">

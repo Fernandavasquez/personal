@@ -42,7 +42,7 @@ export function Proceso() {
         />
         <ol className="relative grid gap-10 md:grid-cols-4 md:gap-6">
           {pasos.map((paso, i) => (
-            <li key={paso.titulo} className="relative flex flex-col items-center text-center">
+            <li key={paso.titulo} data-aparecer style={{ "--retraso": `${i * 120}ms` } as React.CSSProperties} className="relative flex flex-col items-center text-center">
               <span className="relative grid size-16 place-items-center rounded-full border-4 border-cielo-50 bg-white text-cielo-600 shadow-flotante">
                 <Icono nombre={paso.icono} className="size-7" />
                 <span className="absolute -top-1 -right-1 grid size-6 place-items-center rounded-full bg-tinta text-xs font-semibold text-white">

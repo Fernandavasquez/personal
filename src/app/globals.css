@@ -30,6 +30,18 @@
   --shadow-flotante: 0 2px 4px rgb(29 49 71 / 0.04), 0 24px 48px -12px rgb(47 127 189 / 0.22);
 
   --animate-flotar: flotar 7s ease-in-out infinite;
+  --animate-entrar: entrar 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes entrar {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   @keyframes flotar {
     0%,
@@ -55,6 +67,20 @@ body {
 ::selection {
   background: var(--color-cielo-200);
   color: var(--color-tinta);
+}
+
+/* Aparición al desplazarse (activada por el componente Animaciones). */
+html.animar [data-aparecer]:not([data-visible]) {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+/* Al terminar (data-listo) vuelven las transiciones propias de cada tarjeta, como el hover. */
+html.animar [data-aparecer]:not([data-listo]) {
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--retraso, 0ms),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--retraso, 0ms),
+    box-shadow 0.3s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
