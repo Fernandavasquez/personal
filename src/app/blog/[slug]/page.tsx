@@ -101,7 +101,7 @@ export default async function ArticuloConsejo({ params }: PageProps<"/blog/[slug
         <aside className="mt-10 flex flex-col items-center gap-5 rounded-[2rem] bg-gradient-to-br from-cielo-200 via-cielo-100 to-lavanda p-8 text-center sm:flex-row sm:text-left">
           <div className="flex-1">
             <p className="font-display text-2xl font-medium">¿Platicamos sobre tu negocio?</p>
-            <p className="mt-1.5 text-tinta-suave">La primera consulta es gratis y sin compromiso.</p>
+            <p className="mt-1.5 text-tinta-suave">Cuéntame tu idea y te ayudo a hacerla realidad.</p>
           </div>
           <a
             href={enlaceWhatsapp(`¡Hola Fernanda! Leí tu consejo "${consejo.titulo}" y me gustaría platicar.`)}

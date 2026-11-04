@@ -15,7 +15,7 @@ export function Contacto() {
               ¿Llevamos tu negocio <span className="italic text-cielo-700">al siguiente nivel?</span>
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-tinta-suave">
-              Escríbeme y platiquemos de tu idea. La primera consulta es gratis y sin compromiso.
+              Escríbeme y platiquemos de tu idea.
             </p>
 
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
