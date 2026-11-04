@@ -1,17 +1,19 @@
+import type { ReactNode } from "react";
 import { sitio } from "@/data/sitio";
+import { Contador } from "./Contador";
 import { Icono, type NombreIcono } from "./Icono";
 
-const cifras: { icono: NombreIcono; valor: string; texto: string; fondo: string; color: string }[] = [
+const cifras: { icono: NombreIcono; valor: ReactNode; texto: string; fondo: string; color: string }[] = [
   {
     icono: "cohete",
-    valor: `${sitio.proyectosEntregados}+`,
+    valor: <Contador valor={sitio.proyectosEntregados} sufijo="+" />,
     texto: "Proyectos entregados",
     fondo: "bg-cielo-100",
     color: "text-cielo-600",
   },
   {
     icono: "estrella",
-    valor: `${sitio.aniosExperiencia}`,
+    valor: <Contador valor={sitio.aniosExperiencia} />,
     texto: sitio.aniosExperiencia === 1 ? "Año de experiencia" : "Años de experiencia",
     fondo: "bg-lavanda",
     color: "text-lavanda-fuerte",
@@ -34,8 +36,8 @@ export function Cifras() {
           className="grid divide-y divide-cielo-100 rounded-[2rem] border border-white bg-white/85 shadow-flotante backdrop-blur sm:grid-cols-3 sm:divide-x sm:divide-y-0"
         >
           {cifras.map((cifra) => (
-            <li key={cifra.texto} className="flex items-center gap-4 px-7 py-6 sm:justify-center">
-              <span className={`grid size-12 shrink-0 place-items-center rounded-2xl ${cifra.fondo} ${cifra.color}`}>
+            <li key={cifra.texto} className="group flex items-center gap-4 px-7 py-6 sm:justify-center">
+              <span className={`grid size-12 shrink-0 place-items-center rounded-2xl transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110 ${cifra.fondo} ${cifra.color}`}>
                 <Icono nombre={cifra.icono} />
               </span>
               <div>

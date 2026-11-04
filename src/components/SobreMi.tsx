@@ -14,15 +14,15 @@ export function SobreMi() {
     <section id="sobre-mi" className="py-20 sm:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr]">
         {/* Foto de presentación */}
-        <div data-aparecer className="relative mx-auto w-full max-w-sm">
-          <div aria-hidden className="absolute -inset-4 rotate-3 rounded-[2.5rem] bg-gradient-to-br from-cielo-200 to-lavanda" />
-          <div className="relative overflow-hidden rounded-[2rem] border-8 border-white bg-white shadow-flotante">
+        <div data-aparecer className="group relative mx-auto w-full max-w-sm">
+          <div aria-hidden className="absolute -inset-4 rotate-3 rounded-[2.5rem] bg-gradient-to-br from-cielo-200 to-lavanda transition-transform duration-500 group-hover:rotate-6" />
+          <div className="relative overflow-hidden rounded-[2rem] border-8 border-white bg-white shadow-flotante transition-transform duration-500 group-hover:-translate-y-1">
             <Image
               src={foto}
               alt={`${sitio.nombre}, ${sitio.titulo}, el día de su graduación`}
               placeholder="blur"
               sizes="(min-width: 1024px) 640px, 100vw"
-              className="aspect-[4/5] w-full origin-[62%_30%] scale-[1.25] object-cover object-[50%_24%]"
+              className="aspect-[4/5] w-full origin-[62%_30%] scale-[1.25] object-cover object-[50%_24%] transition-transform duration-700 group-hover:scale-[1.32]"
             />
           </div>
         </div>

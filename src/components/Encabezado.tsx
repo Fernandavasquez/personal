@@ -25,8 +25,8 @@ export function Encabezado() {
       }`}
     >
       <nav className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-4 px-5 sm:px-8">
-        <Link href="/" className="flex items-center gap-2.5" onClick={() => setAbierto(false)}>
-          <Logo className="size-10 drop-shadow-sm" />
+        <Link href="/" className="group flex items-center gap-2.5" onClick={() => setAbierto(false)}>
+          <Logo className="size-10 drop-shadow-sm transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105" />
           <span className="leading-tight">
             <span className="block font-display text-lg font-semibold">{sitio.nombreCorto}</span>
             <span className="block text-xs text-tinta-suave">Desarrollo web y sistemas</span>
