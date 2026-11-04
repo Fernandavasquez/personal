@@ -32,8 +32,8 @@ export function Portada() {
 
           <p className="animate-entrar [animation-delay:200ms] mt-7 max-w-xl text-pretty text-lg leading-relaxed text-tinta-suave">
             Soy <strong className="font-semibold text-tinta">{sitio.nombre}</strong>, {sitio.titulo.toLowerCase()}.
-            Creo páginas web completas, con su diseño y su lógica, y sistemas web a la medida para que
-            tu negocio venda más, se organice mejor y ahorre tiempo.
+            Diseño y desarrollo páginas y sistemas web a la medida para que tu negocio venda más, se
+            organice mejor y ahorre tiempo.
           </p>
 
           <div className="animate-entrar [animation-delay:300ms] mt-9 flex flex-col gap-3 sm:flex-row">
