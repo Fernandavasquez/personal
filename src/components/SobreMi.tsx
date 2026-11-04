@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { sitio } from "@/data/sitio";
+import foto from "../../public/fernanda.webp";
 import { Icono, type NombreIcono } from "./Icono";
 
 const valores: { icono: NombreIcono; titulo: string; texto: string }[] = [
@@ -11,25 +13,32 @@ export function SobreMi() {
   return (
     <section id="sobre-mi" className="py-20 sm:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr]">
-        {/* Tarjeta de presentación (reemplazable por una foto en /public) */}
+        {/* Foto de presentación */}
         <div className="relative mx-auto w-full max-w-sm">
           <div aria-hidden className="absolute -inset-4 rotate-3 rounded-[2.5rem] bg-gradient-to-br from-cielo-200 to-lavanda" />
-          <div className="relative rounded-[2rem] bg-white p-8 text-center shadow-flotante">
-            <div className="mx-auto grid size-32 place-items-center rounded-full bg-gradient-to-br from-cielo-100 via-white to-lavanda font-display text-5xl font-medium text-cielo-600 ring-8 ring-cielo-50">
-              FV
+          <div className="relative overflow-hidden rounded-[2rem] border-8 border-white bg-white shadow-flotante">
+            <Image
+              src={foto}
+              alt={`${sitio.nombre}, ${sitio.titulo}, el día de su graduación`}
+              placeholder="blur"
+              sizes="(min-width: 1024px) 640px, 100vw"
+              className="aspect-[4/5] w-full origin-[50%_22%] scale-[1.45] object-cover object-[50%_20%]"
+            />
+          </div>
+
+          <div className="absolute -bottom-6 -left-4 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-flotante sm:-left-10">
+            <span className="grid size-10 place-items-center rounded-xl bg-mantequilla text-mantequilla-fuerte">
+              <Icono nombre="birrete" className="size-5" />
+            </span>
+            <div>
+              <p className="text-xs text-tinta-suave">Graduada en</p>
+              <p className="text-sm font-semibold">Informática y Sistemas</p>
             </div>
-            <p className="mt-6 font-display text-2xl font-medium">{sitio.nombreCorto}</p>
-            <p className="mt-1 text-tinta-suave">{sitio.titulo}</p>
-            <div className="mt-6 flex flex-col gap-2.5 text-sm">
-              <span className="inline-flex items-center justify-center gap-2 rounded-full bg-cielo-50 px-4 py-2 text-tinta-suave">
-                <Icono nombre="birrete" className="size-4 text-cielo-500" />
-                Ingeniería en Informática y Sistemas
-              </span>
-              <span className="inline-flex items-center justify-center gap-2 rounded-full bg-cielo-50 px-4 py-2 text-tinta-suave">
-                <Icono nombre="ubicacion" className="size-4 text-cielo-500" />
-                {sitio.ubicacion}
-              </span>
-            </div>
+          </div>
+
+          <div className="absolute -top-5 -right-3 flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold shadow-flotante sm:-right-8">
+            <Icono nombre="ubicacion" className="size-4 text-cielo-500" />
+            Xela, Guatemala
           </div>
         </div>
 
@@ -52,6 +61,13 @@ export function SobreMi() {
               que realmente funcionen.
             </p>
           </div>
+
+          <figure className="relative mt-8 rounded-3xl border-l-4 border-cielo-300 bg-white/80 py-5 pr-6 pl-7 shadow-suave">
+            <blockquote className="font-display text-xl leading-snug italic text-tinta sm:text-2xl">
+              “{sitio.frase}”
+            </blockquote>
+            <figcaption className="mt-3 text-sm font-semibold text-cielo-600">— {sitio.nombreCorto}</figcaption>
+          </figure>
 
           <ul className="mt-9 grid gap-4 sm:grid-cols-3">
             {valores.map((valor) => (
