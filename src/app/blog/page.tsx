@@ -4,7 +4,7 @@ import { consejos } from "@/data/consejos";
 import { sitio } from "@/data/sitio";
 
 export const metadata: Metadata = {
-  title: `Consejos para digitalizar tu negocio · ${sitio.nombreCorto}`,
+  title: `Consejos para digitalizar tu negocio · ${sitio.empresa}`,
   description:
     "Consejos sencillos sobre páginas web, sistemas y tecnología para negocios de Guatemala, por Fernanda Vásquez.",
 };

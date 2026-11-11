@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* "dark:" se activa con la clase .dark en <html> (botón de sol/luna). */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Paleta pastel: celestes como base, con acentos lavanda, menta y durazno. */
 @theme {
   --color-cielo-50: #f3f9ff;

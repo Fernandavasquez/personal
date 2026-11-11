@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps<"/blog/[slug]">): P
   const consejo = obtenerConsejo(slug);
   if (!consejo) return {};
   return {
-    title: `${consejo.titulo} · ${sitio.nombreCorto}`,
+    title: `${consejo.titulo} · ${sitio.empresa}`,
     description: consejo.resumen,
     openGraph: { title: consejo.titulo, description: consejo.resumen, type: "article", locale: "es_GT" },
   };

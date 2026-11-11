@@ -3,6 +3,7 @@
 export const sitio = {
   nombre: "Fernanda Lisbeth Vásquez Castillo",
   nombreCorto: "Fernanda Vásquez",
+  empresa: "Zentra",
   titulo: "Ingeniera en Informática y Sistemas",
   ubicacion: "Quetzaltenango, Guatemala",
   // Tu frase personal: aparece en la sección "Sobre mí".

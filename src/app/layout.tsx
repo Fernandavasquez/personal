@@ -18,7 +18,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: `${sitio.nombreCorto} · Desarrollo web y sistemas en Quetzaltenango`,
+  title: `${sitio.empresa} · Desarrollo web y sistemas en Quetzaltenango`,
   description:
     "Ingeniera en Informática y Sistemas en Quetzaltenango, con clientes en toda Guatemala. Páginas web completas, sistemas web a la medida y servicio mensual para digitalizar tu negocio.",
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "Xela",
   ],
   openGraph: {
-    title: `${sitio.nombreCorto} · Digitaliza tu negocio`,
+    title: `${sitio.empresa} · Digitaliza tu negocio`,
     description:
       "Páginas web completas y sistemas web a la medida para negocios de Guatemala.",
     locale: "es_GT",
