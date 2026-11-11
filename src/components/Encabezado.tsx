@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { enlacesNavegacion, sitio } from "@/data/sitio";
+import { enlacesNavegacion } from "@/data/sitio";
 import { BotonTema } from "./BotonTema";
 import { Icono } from "./Icono";
 import { Logo } from "./Logo";
@@ -26,10 +26,7 @@ export function Encabezado() {
     >
       <nav className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-4 px-5 sm:px-8">
         <Link href="/" aria-label="Zentra, inicio" className="group" onClick={() => setAbierto(false)}>
-          <Logo
-            subtitulo={`por ${sitio.nombreCorto}`}
-            claseSimbolo="transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105"
-          />
+          <Logo claseSimbolo="transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105" />
         </Link>
 
         <ul className="hidden items-center gap-0.5 xl:flex">
